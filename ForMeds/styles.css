@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+
+#please-container {
+    margin: 20px 0;
+}
+
+#please-text {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative; /* Constrain the "No" button within this container */
+    overflow: hidden; /* Prevent the button from going out of bounds */
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    color: #ff6b6b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Dancing Script', cursive;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#yes-button {
+    background: #4caf50;
+    color: #fff;
+}
+
+#no-button {
+    background: #f44336;
+    color: #fff;
+}
+
+/* Cat GIFs */
+#cat-gifs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure clicks pass through to elements below */
+    z-index: -1; /* Ensure GIFs are behind other content */
+    overflow: hidden; /* Prevent GIFs from overflowing the screen */
+}
+
+.cat-gif {
+    position: absolute;
+    width: 150px; /* Default size, can be overridden by JavaScript */
+    height: auto;
+}
